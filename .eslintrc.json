@@ -1,0 +1,42 @@
+{
+  "plugins": ["prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-var": "error", // var 금지
+    "no-multiple-empty-lines": "error", // 여러 줄 공백 금지
+    "eqeqeq": "error", // 일치 연산자 사용 필수
+    "dot-notation": "error", // 가능하다면 dot notation 사용
+    "no-unused-vars": "warn", // 사용하지 않는 변수 경고
+    "react/jsx-no-useless-fragment": "error", // 불필요한 fragment 금지
+    "react/react-in-jsx-scope": "off", // Next.js는 필요 없음
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "always",
+        "bracketSpacing": true,
+        "htmlWhitespaceSensitivity": "css",
+        "insertPragma": false,
+        "bracketSameLine": false,
+        "jsxSingleQuote": true, // JSX에서 singleQuote 사용
+        "printWidth": 80,
+        "proseWrap": "preserve",
+        "quoteProps": "as-needed",
+        "semi": false, // 세미콜론 사용하지 않음
+        "singleQuote": true, // singleQuote 사용
+        "useTabs": false,
+        "tabWidth": 2,
+        "trailingComma": "es5", // ES5 규칙에 맞춰 trailingComma 사용
+        "endOfLine": "auto"
+      }
+    ],
+    "quotes": ["error", "single"], // singleQuote 사용 규칙 추가
+    "react/jsx-quotes": ["error", "prefer-single"], // JSX에서 singleQuote 사용 규칙 추가
+    "comma-dangle": ["error", "only-multiline"] // ES5에 맞춰 trailingComma 사용 규칙 추가
+  }
+}
